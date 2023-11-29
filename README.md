@@ -351,7 +351,7 @@ Since a seed phrase can be used to reconstruct lost/missing key-pairs, it is cus
                         "n": 0
                     },
                     "value": {
-                        "Receipt": {
+                        "Item": {
                             "amount": 1000,
                             "drs_tx_hash": "default_drs_tx_hash"
                         }
@@ -363,7 +363,7 @@ Since a seed phrase can be used to reconstruct lost/missing key-pairs, it is cus
                         "n": 0
                     },
                     "value": {
-                        "Receipt": {
+                        "Item": {
                             "amount": 1000,
                             "drs_tx_hash": "g7d07...6704b"
                         }
@@ -443,7 +443,7 @@ const createReceiptResponse = await wallet.createReceipts(
 {
     "asset": {
         "asset": {
-            "Receipt": {
+            "Item": {
                 "amount": 1000,
                 "drs_tx_hash": "g7d07...6704b"
             }
@@ -567,7 +567,7 @@ const sendingAsset = initIAssetToken({"Token": 10});
 
 // The asset we want to receive
 const receivingAsset = initIAssetReceipt({
-  "Receipt": {
+  "Item": {
       "amount": 10,
       "drs_tx_hash": "default_drs_tx_hash"
   }});
@@ -632,7 +632,7 @@ const paymentResult = await makeRbPayment(
                     "from": "",
                     "to": "2a646...f8b98",
                     "asset": {
-                        "Receipt": {
+                        "Item": {
                             "amount": 1,
                             "drs_tx_hash": "default_drs_tx_hash"
                         }

@@ -98,7 +98,7 @@ export enum IErrorInternal {
     NoHostsProvided = 'No hosts provided',
     NoKeypairsProvided = 'No key-pairs provided',
     NoPassPhraseProvided = 'No passphrase provided',
-    NoComputeHostProvided = 'No compute host provided',
+    NoMempoolHostProvided = 'No compute host provided',
     UnknownError = 'Unknown Error',
 }
 

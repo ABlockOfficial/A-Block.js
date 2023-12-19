@@ -194,16 +194,16 @@ export class ABlockWallet {
         if (this.mempoolHost == undefined)
             return {
                 status: 'error',
-                reason: IErrorInternal.NoComputeHostProvided,
+                reason: IErrorInternal.NoMempoolHostProvided,
             } as IClientResponse;
 
         // Initialize routes proof-of-work for compute host
         this.mempoolRoutesPoW = new Map();
-        const initComputeResult = await this.initNetworkForHost(
+        const initMempoolResult = await this.initNetworkForHost(
             this.mempoolHost,
             this.mempoolRoutesPoW,
         );
-        if (initComputeResult.status == 'error') return initComputeResult;
+        if (initMempoolResult.status == 'error') return initMempoolResult;
 
         // Optional - Initialize routes proof-of-work for storage host
         if (this.storageHost !== undefined) {

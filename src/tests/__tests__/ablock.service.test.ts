@@ -1,6 +1,9 @@
 import { SEED } from '../constants';
 import { ABlockWallet } from '../../services/ablock.service';
 
+const MEMPOOL_HOST = 'http://127.0.0.1:3003';
+const STORAGE_HOST = 'http://127.0.0.1:3001';
+
 let ablockInstance = new ABlockWallet();
 
 beforeEach(() => {
@@ -9,7 +12,7 @@ beforeEach(() => {
 
 test('init wallet without optional config fields', async () => {
     const config = {
-        mempoolHost: 'http://49.12.234.10:3003',
+        mempoolHost: MEMPOOL_HOST,
         passphrase: '',
     };
 
@@ -36,8 +39,8 @@ test('init wallet locally and then connect', async () => {
     });
 
     const config = {
-        mempoolHost: 'http://49.12.234.10:3003',
-        storageHost: 'http://49.12.234.10:3001',
+        mempoolHost: MEMPOOL_HOST,
+        storageHost: STORAGE_HOST,
         passphrase: '',
     };
 

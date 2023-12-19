@@ -12,7 +12,7 @@ import {
     IResult,
 } from '../interfaces';
 import { getStringBytes } from '../utils';
-import { RECEIPT_DEFAULT } from './constants';
+import { ITEM_DEFAULT } from './constants';
 import { constructAddress, createSignature } from './key.mgmt';
 import { constructTxInSignableAssetHash } from './script.mgmt';
 import { createTx, getInputsForTx } from './tx.mgmt';
@@ -28,7 +28,7 @@ import { createTx, getInputsForTx } from './tx.mgmt';
  * @param {Uint8Array} secretKey - Secret key as Uint8Array
  * @param {Uint8Array} pubKey - Public key as Uint8Array
  * @param {(number | null)} version - Address version
- * @param {number} [amount=RECEIPT_DEFAULT] - Amount of the asset to create
+ * @param {number} [amount=ITEM_DEFAULT] - Amount of the asset to create
  * @param {boolean} [default_drs_tx_hash=true] - Whether to use the default DRS transaction hash
  * @param {string | null} [metadata=null] - Metadata to be included in the asset
  * @return {*}  {IResult<IItemCreationAPIPayload>}
@@ -37,7 +37,7 @@ export function createItemPayload(
     secretKey: Uint8Array,
     pubKey: Uint8Array,
     version: number | null,
-    amount: number = RECEIPT_DEFAULT,
+    amount: number = ITEM_DEFAULT,
     default_drs_tx_hash = true,
     metadata: string | null = null,
 ): IResult<IItemCreationAPIPayload> {

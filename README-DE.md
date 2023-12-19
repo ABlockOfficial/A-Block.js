@@ -111,7 +111,7 @@ Installieren Sie das Modul in Ihr Projekt:
         .initNew({
             mempoolHost: MEMPOOL_HOST,
             intercomHost: INTERCOM_HOST,
-            passPhrase: PASSPHRASE,
+            passphrase: PASSPHRASE,
         })
         .then((initResult) => {
             // Zeigen Sie dem Benutzer die Seed-Phrase zur sicheren Aufbewahrung an
@@ -128,7 +128,7 @@ Einige Argumente während der Initialisierung sind optional, wie z.B. `initOffli
 
 Die Schnittstellen-Elemente `mempoolHost` und `intercomHost` werden verwendet, um die API-Endpunkte für den Mempool-Knoten bzw. den ABlock Intercom-Server festzulegen, mit denen der Client verbunden werden soll.
 
-Während der Initialisierung muss dem Client ein benutzerdefiniertes `passPhrase` übergeben werden, da dieses Passwort zur Verschlüsselung/Entschlüsselung von Daten während der Operationen verwendet wird.
+Während der Initialisierung muss dem Client ein benutzerdefiniertes `passphrase` übergeben werden, da dieses Passwort zur Verschlüsselung/Entschlüsselung von Daten während der Operationen verwendet wird.
 
 -   `initFromMasterKey`
 
@@ -148,7 +148,7 @@ const client = new ABlockWallet();
 client.initFromMasterKey({
     mempoolHost: MEMPOOL_HOST,
     intercomHost: INTERCOM_HOST,
-    passPhrase: PASSPHRASE,
+    passphrase: PASSPHRASE,
   },
   masterKey: getMasterKey()
 );
@@ -173,7 +173,7 @@ const client = new ABlockWallet();
 client.initFromSeed({
     mempoolHost: MEMPOOL_HOST,
     intercomHost: INTERCOM_HOST,
-    passPhrase: PASSPHRASE,
+    passphrase: PASSPHRASE,
   },
   seedPhrase: SEED_PHRASE
 ).then((initResult) => {
@@ -215,7 +215,7 @@ const client = new ABlockWallet();
 const config = {
     mempoolHost: MEMPOOL_HOST,
     intercomHost: INTERCOM_HOST,
-    passPhrase: PASSPHRASE,
+    passphrase: PASSPHRASE,
 };
 
 // Initialisieren Sie den Client mit der benötigten Konfiguration

@@ -66,7 +66,7 @@ export enum IAPIRoute {
     CheckUpdate = '/check_update',
     AddressConstruction = '/address_construction' /* NOTE: No implementation */,
     GetUtxoAddressList = '/utxo_addresses',
-    CreateItemAsset = '/create_Item_asset',
+    CreateItemAsset = '/create_item_asset',
     FetchPending = '/fetch_pending' /* NOTE: Currently not available */,
     /* --------------------------- Storage Network Routes --------------------------- */
     BlockchainEntry = '/blockchain_entry',
